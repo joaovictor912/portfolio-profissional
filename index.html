@@ -1,205 +1,289 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JVPLA - Portfólio Acadêmico</title>
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+    <title>JVPLA - Portfolio Profissional</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header>
-        <div class="container">
-            <nav>
-                <a href="#projects">Projetos</a>
-                <a href="#skills">Habilidades</a>
-                <a href="#certificates">Certificados</a>
-                <a href="#contact">Contato</a>
-            </nav>
+    <!-- ===== TOP BAR ===== -->
+    <header class="topbar">
+        <div class="topbar-left">
+            <a href="#" class="logo">JVPLA<span class="logo-dot">.</span></a>
+        </div>
+        <nav class="topbar-nav">
+            <a href="#" class="topbar-link active" data-section="home">Início</a>
+            <a href="#" class="topbar-link" data-section="projects">Projetos</a>
+            <a href="#" class="topbar-link" data-section="skills">Habilidades</a>
+            <a href="#" class="topbar-link" data-section="certificates">Certificados</a>
+            <a href="#" class="topbar-link" data-section="contact">Contato</a>
+        </nav>
+        <div class="topbar-right">
+            <a href="https://github.com/joaovictor912" target="_blank" class="topbar-social"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/jo%C3%A3o-victor-pessoa-de-lima-dos-anjos-4998a3276/" target="_blank" class="topbar-social"><i class="fa-brands fa-linkedin-in"></i></a>
         </div>
     </header>
 
-    <main>
-        <section class="hero container">
-            <h1>João Victor Pessoa de Lima dos Anjos</h1>
-            <p>Engenharia da Computação | Desenvolvimento Full-Stack | IA & Machine Learning</p>
-        </section>
+    <!-- ===== MAIN LAYOUT (Projects View) ===== -->
+    <main class="main-view" id="mainView">
 
-        <section id="projects" class="container">
-            <h2>Projetos Destacados</h2>
-            <div class="projects-grid-gallery">
-                <div class="project-card-gallery" data-modal-target="#modal-projeto-1"><div class="project-image-gallery" style="background-image: url('images/app.png');"></div><div class="project-title-overlay"><h3>Corretor de Provas</h3></div></div>
-                <div class="project-card-gallery" data-modal-target="#modal-projeto-2"><div class="project-image-gallery" style="background-image: url('images/ferraro.png');"></div><div class="project-title-overlay"><h3>Previsão Fórmula 1</h3></div></div>
-                <div class="project-card-gallery" data-modal-target="#modal-projeto-3"><div class="project-image-gallery" style="background-image: url('images/o-que-e-um-museu-triscele-museologia.jpg');"></div><div class="project-title-overlay"><h3>Art Seeker</h3></div></div>
-                <div class="project-card-gallery" data-modal-target="#modal-projeto-4"><div class="project-image-gallery" style="background-image: url('images/portifolio-interativo.png');"></div><div class="project-title-overlay"><h3>Portfólio Interativo - OS</h3></div></div>
-                <div class="project-card-gallery" data-modal-target="#modal-projeto-5"><div class="project-image-gallery" style="background-image: url('images/mundial.png');"></div><div class="project-title-overlay"><h3>Previsão Mundial RF</h3></div></div>
-            </div>
-        </section>
-        
-        <section id="skills" class="container">
-            <h2>Habilidades</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Linguagens de Programação</h3>
-                    <ul>
-                        <li><i class="fa-brands fa-python"></i> Python</li>
-                        <li><i class="fa-brands fa-js"></i> JavaScript</li>
-                        <li><i class="fa-brands fa-java"></i> Java</li>
-                        <li><i class="fa-solid fa-code"></i> C++</li>
-                        <li><i class="fa-solid fa-code"></i> C</li>
-                        <li><i class="fa-brands fa-css3-alt"></i> CSS</li>
-                        <li><i class="fa-solid fa-database"></i> SQL</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Ferramentas e Tecnologias</h3>
-                    <ul>
-                        <li><i class="fa-brands fa-git-alt"></i> Git & GitHub</li>
-                        <li><i class="fa-solid fa-file-excel"></i> Excel</li>
-                        <li><i class="fa-solid fa-database"></i> MySQL</li>
-                        <li><i class="fa-solid fa-file-powerpoint"></i> Power Point</li>
-                        <li><i class="fa-solid fa-box-archive"></i> Pacote Office</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Idiomas</h3>
-                    <ul>
-                        <li><i class="fa-solid fa-globe"></i> Português (Nativo)</li>
-                        <li><i class="fa-solid fa-globe"></i> Inglês (Avançado)</li>
-                    </ul>
+        <!-- HOME SECTION -->
+        <section class="view-section active" id="sec-home">
+            <div class="home-page">
+                <div class="home-content">
+                    <span class="home-greeting">Olá, eu sou</span>
+                    <h1 class="home-name">João Victor<span class="logo-dot">.</span></h1>
+                    <p class="home-role"><i class="fa-solid fa-building"></i> Estagiário em <strong>Operações &amp; Automação</strong> no <strong>C6 Bank</strong></p>
+                    <div class="home-divider"></div>
+                    <p class="home-bio">Estudante de Engenharia da Computação apaixonado por tecnologia e inovação. Atualmente, atuo como estagiário na área de Operações em Automação do <strong>C6 Bank</strong>, onde trabalho com <strong>UiPath</strong> para desenvolver e otimizar processos automatizados, buscando eficiência operacional através da automação inteligente.</p>
+                    <div class="home-projects-preview">
+                        <h3 class="home-projects-title"><i class="fa-solid fa-code"></i> Meus Projetos</h3>
+                        <p class="home-projects-desc">Desenvolvo projetos que vão desde <strong>aplicações mobile com IA</strong> para correção automatizada de provas, até modelos de <strong>Machine Learning</strong> para previsões esportivas e sistemas de <strong>busca semântica com NLP</strong>. Explore meu portfólio para conhecer cada um deles em detalhe.</p>
+                    </div>
+                    <div class="home-cta">
+                        <a href="#" class="home-btn-primary" data-section="projects"><i class="fa-solid fa-folder-open"></i> Ver Projetos</a>
+                        <a href="#" class="home-btn-secondary" data-section="contact"><i class="fa-solid fa-envelope"></i> Contato</a>
+                    </div>
+                    <div class="home-tech-strip">
+                        <span><i class="fa-brands fa-python"></i> Python</span>
+                        <span><i class="fa-solid fa-robot"></i> UiPath</span>
+                        <span><i class="fa-brands fa-flutter"></i> Flutter</span>
+                        <span><i class="fa-solid fa-brain"></i> Machine Learning</span>
+                        <span><i class="fa-brands fa-js"></i> JavaScript</span>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="certificates" class="container">
-            <h2>Certificados</h2>
-            <div class="certificates-grid">
-                <div class="certificate-card">
-                    <div class="card-header">
-                        <img src="images/cisco-logo.png" alt="Logo da Cisco" class="issuer-logo">
-                        <h3>Network Technician Career Path</h3>
+        <!-- PROJECTS SECTION -->
+        <section class="view-section" id="sec-projects">
+            <!-- Left: Big background image -->
+            <div class="split-left" id="projectBg">
+                <img src="images/app.png" alt="Projeto" class="bg-image active" id="bgImg-1">
+                <img src="images/ferraro.png" alt="Projeto" class="bg-image" id="bgImg-2">
+                <img src="images/o-que-e-um-museu-triscele-museologia.jpg" alt="Projeto" class="bg-image" id="bgImg-3">
+                <img src="images/mundial.png" alt="Projeto" class="bg-image" id="bgImg-4">
+            </div>
+
+            <!-- Right: Product details card -->
+            <div class="split-right">
+                <div class="detail-card" id="detailCard">
+                    <!-- Project selector tabs -->
+                    <div class="project-selector">
+                        <span class="selector-label">Selecione um projeto</span>
+                        <div class="selector-tabs">
+                            <button class="selector-tab active" data-project="1">
+                                <img src="images/app.png" alt="">
+                            </button>
+                            <button class="selector-tab" data-project="2">
+                                <img src="images/ferraro.png" alt="">
+                            </button>
+                            <button class="selector-tab" data-project="3">
+                                <img src="images/o-que-e-um-museu-triscele-museologia.jpg" alt="">
+                            </button>
+                            <button class="selector-tab" data-project="4">
+                                <img src="images/mundial.png" alt="">
+                            </button>
+                        </div>
                     </div>
-                    <p class="issuer">Emitido por: Cisco Networking Academy</p>
-                    <p class="certificate-description">Curso intensivo de 70 horas cobrindo fundamentos de redes, configuração de dispositivos Cisco, protocolos e troubleshooting.</p>
-                    <a href="https://www.credly.com/badges/e9cfddec-41d6-42ee-9c20-212ccb2cc9c5/linked_in_profile" target="_blank">Ver Credencial &rarr;</a>
-                </div>
-                <div class="certificate-card">
-                    <div class="card-header">
-                        <img src="images/huawei-logo.png" alt="Logo da Huawei" class="issuer-logo">
-                        <h3>HCIA- Cloud Computing V5.0 Course</h3>
+
+                    <!-- Project details (one per project, toggled) -->
+                    <div class="project-detail active" id="detail-1">
+                        <span class="detail-tag">Flutter + Python + IA</span>
+                        <h2 class="detail-title">Corretor de Provas</h2>
+                        <div class="detail-divider"></div>
+                        <h4 class="detail-subtitle">Detalhes do Projeto</h4>
+                        <p class="detail-desc">Uma aplicacao movel multiplataforma, desenvolvida em Flutter, que automatiza a correcao de provas de multipla escolha. Utilizando a camera do dispositivo, o sistema aplica tecnicas de visao computacional + inteligencia artificial com um backend em Python para analisar as folhas de resposta, comparar com um gabarito mestre e fornecer o resultado em um curto espaco de tempo. O projeto inclui gestao de turmas e provas, armazenamento persistente de dados e a capacidade de exportar relatorios detalhados para ficheiros Excel (.xlsx).</p>
                     </div>
-                    <p class="issuer">Emitido por: Huawei ICT Academy</p>
-                    <p class="certificate-description">Formação em computação em nuvem da Huawei, abordando os principais conceitos e serviços da plataforma IaaS.</p>
-                    <a href="https://kltstaticcontent.shixizhi.huawei.com/1365189427395223554/certificate/20250420/9167b2b2e1ec47f799b6d95ed31af02c_EBG20250420000005c79664807712457bbc988d45ccd7c015.png" target="_blank">Ver Credencial &rarr;</a>
-                </div>
-                <div class="certificate-card">
-                    <div class="card-header">
-                        <img src="images/bradesco-logo.png" alt="Logo do Bradesco" class="issuer-logo">
-                        <h3>Excel Avançado - Bradesco</h3>
+
+                    <div class="project-detail" id="detail-2">
+                        <span class="detail-tag">Data Science + ML</span>
+                        <h2 class="detail-title">Previsao Formula 1</h2>
+                        <div class="detail-divider"></div>
+                        <h4 class="detail-subtitle">Detalhes do Projeto</h4>
+                        <p class="detail-desc">Este projeto de ciencia de dados desenvolve e avalia modelos de machine learning para simular o grid de largada de futuras corridas de Formula 1. O sistema utiliza dados historicos oficiais para treinar modelos preditivos e aplica fatores de desempenho calculados para refinar os resultados, gerando uma classificacao simulada que leva em conta a performance historica de equipes e pilotos.</p>
+                        <a href="https://github.com/joaovictor912/Previs-o-F1" target="_blank" class="detail-link">Ver no GitHub <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
-                    <p class="issuer">Emitido por: Fundação Bradesco</p>
-                    <p class="certificate-description">Curso de 30 horas focado em ferramentas e funcionalidades avançadas do Microsoft Excel para análise e gestão de dados.</p>
-                    <a href="certificados/ExcelAvançado.pdf" target="_blank">Ver Credencial &rarr;</a>
-                </div>
-                <div class="certificate-card">
-                    <div class="card-header">
-                        <img src="images/maua-logo.png" alt="Logo do Instituto Mauá de Tecnologia" class="issuer-logo">
-                        <h3>IA Aplicada na Área da Saúde Pública</h3>
+
+                    <div class="project-detail" id="detail-3">
+                        <span class="detail-tag">NLP + Embeddings</span>
+                        <h2 class="detail-title">Art Seeker</h2>
+                        <div class="detail-divider"></div>
+                        <h4 class="detail-subtitle">Detalhes do Projeto</h4>
+                        <p class="detail-desc">O Art Seeker e uma aplicacao de Inteligencia Artificial voltada para a busca interativa em grandes acervos de obras de arte. A solucao utiliza modelos de NLP (Processamento de Linguagem Natural) para compreender consultas em linguagem natural. O sistema transforma essas consultas em vetores semanticos (embeddings) e realiza a comparacao com descricoes das obras no acervo.</p>
+                        <a href="https://github.com/joaovictor912/ArtSeeker" target="_blank" class="detail-link">Ver no GitHub <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
-                    <p class="issuer">Emitido por: Instituto Mauá de Tecnologia</p>
-                    <p class="certificate-description">Curso de 40 horas focado em machine learning, com projeto final no desenvolvimento de uma IA para prever a sobrevida de pacientes com câncer.</p>
-                    <a href="certificados/IAAplicadaNaSaúdePública.png" target="_blank">Ver Credencial &rarr;</a>
-                </div>
-                <div class="certificate-card">
-                    <div class="card-header">
-                        <img src="images/maua-logo.png" alt="Logo do Instituto Mauá de Tecnologia" class="issuer-logo">
-                        <h3>Huawei Certified ICT Associate (HCIA) - 5G</h3>
+
+                    <div class="project-detail" id="detail-4">
+                        <span class="detail-tag">Monte Carlo + Random Forest</span>
+                        <h2 class="detail-title">Previsao Mundial</h2>
+                        <div class="detail-divider"></div>
+                        <h4 class="detail-subtitle">Detalhes do Projeto</h4>
+                        <p class="detail-desc">Este projeto e um simulador que utiliza a Simulacao de Monte Carlo para estimar a probabilidade de cada time vencer o Mundial de Clubes 2025, executando o torneio 1000 vezes. A previsao de cada partida individual e realizada por um algoritmo de Machine Learning, o Random Forest, que calcula as chances de vitoria, empate ou derrota com base em estatisticas detalhadas.</p>
+                        <a href="https://github.com/joaovictor912/MundialPrevis-oRF" target="_blank" class="detail-link">Ver no GitHub <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
-                    <p class="issuer">Emitido por: Huawei ICT Academy - Instituto Mauá de Tecnologia</p>
-                    <p class="certificate-description">Certificação focada em tecnologias e arquitetura de redes 5G, abordando os princípios e aplicações da quinta geração de comunicação móvel.</p>
-                    <a href="certificados/5GHUAWEI.png" target="_blank">Ver Credencial &rarr;</a>
-                </div>
-                <div class="certificate-card">
-                    <div class="card-header">
-                        <img src="images/maua-logo.png" alt="Logo do Instituto Mauá de Tecnologia" class="issuer-logo">
-                        <h3>Inteligência Artificial Embarcada</h3>
-                    </div>
-                    <p class="issuer">Emitido por: Instituto Mauá de Tecnologia</p>
-                    <p class="certificate-description">Curso de 40 horas com foco em IA embarcada, culminando em um projeto prático para treinar um modelo de reconhecimento facial em tempo real.</p>
-                    <a href="certificados/CM4330-InteligenciaArtificialEmbarcadja-2024.pdf" target="_blank">Ver Credencial &rarr;</a>
                 </div>
             </div>
         </section>
+
+        <!-- SKILLS SECTION -->
+        <section class="view-section" id="sec-skills">
+            <div class="full-page-section">
+                <div class="page-inner">
+                    <h2 class="page-title">Habilidades <span class="amp">&amp;</span> Stack</h2>
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <div class="skill-card-icon"><i class="fa-solid fa-terminal"></i></div>
+                            <h3>Linguagens</h3>
+                            <div class="skill-tags">
+                                <span><i class="fa-brands fa-python"></i> Python</span>
+                                <span><i class="fa-brands fa-js"></i> JavaScript</span>
+                                <span><i class="fa-brands fa-java"></i> Java</span>
+                                <span><i class="fa-solid fa-code"></i> C++</span>
+                                <span><i class="fa-solid fa-code"></i> C</span>
+                                <span><i class="fa-brands fa-css3-alt"></i> CSS</span>
+                                <span><i class="fa-solid fa-database"></i> SQL</span>
+                            </div>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-card-icon"><i class="fa-solid fa-toolbox"></i></div>
+                            <h3>Ferramentas</h3>
+                            <div class="skill-tags">
+                                <span><i class="fa-brands fa-git-alt"></i> Git &amp; GitHub</span>
+                                <span><i class="fa-solid fa-file-excel"></i> Excel</span>
+                                <span><i class="fa-solid fa-database"></i> MySQL</span>
+                                <span><i class="fa-solid fa-file-powerpoint"></i> PowerPoint</span>
+                                <span><i class="fa-solid fa-box-archive"></i> Pacote Office</span>
+                            </div>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-card-icon"><i class="fa-solid fa-language"></i></div>
+                            <h3>Idiomas</h3>
+                            <div class="skill-tags">
+                                <span><i class="fa-solid fa-globe"></i> Portugues (Nativo)</span>
+                                <span><i class="fa-solid fa-globe"></i> Ingles (Avancado)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CERTIFICATES SECTION -->
+        <section class="view-section" id="sec-certificates">
+            <div class="full-page-section">
+                <div class="page-inner">
+                    <h2 class="page-title">Certificados</h2>
+                    <div class="certs-grid">
+                        <div class="cert-card-v2">
+                            <div class="cert-card-top">
+                                <img src="images/cisco-logo.png" alt="Cisco" class="cert-logo-v2">
+                                <div>
+                                    <h3>Network Technician Career Path</h3>
+                                    <span class="cert-issuer-v2">Cisco Networking Academy</span>
+                                </div>
+                            </div>
+                            <p>Curso intensivo de 70 horas cobrindo fundamentos de redes, configuracao de dispositivos Cisco, protocolos e troubleshooting.</p>
+                            <a href="https://www.credly.com/badges/e9cfddec-41d6-42ee-9c20-212ccb2cc9c5/linked_in_profile" target="_blank" class="cert-link-v2">Ver Credencial <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                        <div class="cert-card-v2">
+                            <div class="cert-card-top">
+                                <img src="images/huawei-logo.png" alt="Huawei" class="cert-logo-v2">
+                                <div>
+                                    <h3>HCIA - Cloud Computing V5.0</h3>
+                                    <span class="cert-issuer-v2">Huawei ICT Academy</span>
+                                </div>
+                            </div>
+                            <p>Formacao em computacao em nuvem da Huawei, abordando os principais conceitos e servicos da plataforma IaaS.</p>
+                            <a href="https://kltstaticcontent.shixizhi.huawei.com/1365189427395223554/certificate/20250420/9167b2b2e1ec47f799b6d95ed31af02c_EBG20250420000005c79664807712457bbc988d45ccd7c015.png" target="_blank" class="cert-link-v2">Ver Credencial <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                        <div class="cert-card-v2">
+                            <div class="cert-card-top">
+                                <img src="images/bradesco-logo.png" alt="Bradesco" class="cert-logo-v2">
+                                <div>
+                                    <h3>Excel Avancado</h3>
+                                    <span class="cert-issuer-v2">Fundacao Bradesco</span>
+                                </div>
+                            </div>
+                            <p>Curso de 30 horas focado em ferramentas e funcionalidades avancadas do Microsoft Excel para analise e gestao de dados.</p>
+                            <a href="certificados/ExcelAvanC3A7ado.pdf" target="_blank" class="cert-link-v2">Ver Credencial <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                        <div class="cert-card-v2">
+                            <div class="cert-card-top">
+                                <img src="images/maua-logo.png" alt="Maua" class="cert-logo-v2">
+                                <div>
+                                    <h3>IA Aplicada na Saude Publica</h3>
+                                    <span class="cert-issuer-v2">Instituto Maua de Tecnologia</span>
+                                </div>
+                            </div>
+                            <p>Curso de 40 horas focado em machine learning, com projeto final no desenvolvimento de uma IA para prever a sobrevida de pacientes com cancer.</p>
+                            <a href="certificados/IAAplicadaNaSaC3BAdePública.png" target="_blank" class="cert-link-v2">Ver Credencial <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                        <div class="cert-card-v2">
+                            <div class="cert-card-top">
+                                <img src="images/maua-logo.png" alt="Maua" class="cert-logo-v2">
+                                <div>
+                                    <h3>HCIA - 5G (Huawei)</h3>
+                                    <span class="cert-issuer-v2">Huawei ICT Academy - IMT</span>
+                                </div>
+                            </div>
+                            <p>Certificacao focada em tecnologias e arquitetura de redes 5G, abordando os principios e aplicacoes da quinta geracao de comunicacao movel.</p>
+                            <a href="certificados/5GHUAWEI.png" target="_blank" class="cert-link-v2">Ver Credencial <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                        <div class="cert-card-v2">
+                            <div class="cert-card-top">
+                                <img src="images/maua-logo.png" alt="Maua" class="cert-logo-v2">
+                                <div>
+                                    <h3>IA Embarcada</h3>
+                                    <span class="cert-issuer-v2">Instituto Maua de Tecnologia</span>
+                                </div>
+                            </div>
+                            <p>Curso de 40 horas com foco em IA embarcada, culminando em um projeto pratico para treinar um modelo de reconhecimento facial em tempo real.</p>
+                            <a href="certificados/CM4330-InteligenciaArtificialEmbarcadja-2024.pdf" target="_blank" class="cert-link-v2">Ver Credencial <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section class="view-section" id="sec-contact">
+            <div class="full-page-section contact-page">
+                <div class="page-inner contact-inner">
+                    <h2 class="contact-title">Vamos Conversar<span class="logo-dot">?</span></h2>
+                    <p class="contact-sub">Estou sempre aberto a novas oportunidades e colaboracoes. Entre em contato!</p>
+                    <div class="contact-cards">
+                        <a href="mailto:jvpessoa2015@gmail.com" class="contact-card">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span class="cc-label">Email</span>
+                            <span class="cc-value">jvpessoa2015@gmail.com</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/jo%C3%A3o-victor-pessoa-de-lima-dos-anjos-4998a3276/" target="_blank" class="contact-card">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                            <span class="cc-label">LinkedIn</span>
+                            <span class="cc-value">Joao Victor Pessoa</span>
+                        </a>
+                        <a href="https://github.com/joaovictor912" target="_blank" class="contact-card">
+                            <i class="fa-brands fa-github"></i>
+                            <span class="cc-label">GitHub</span>
+                            <span class="cc-value">joaovictor912</span>
+                        </a>
+                    </div>
+                    <div class="contact-footer">
+                        <span>&copy; 2026 JVPLA. Todos os direitos reservados.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
-    <footer id="contact">
-        <div class="container">
-            <h2>Contato</h2>
-            <p>Estou sempre aberto a novas oportunidades e colaborações. Entre em contato!</p>
-            <div class="contact-links">
-                <a href="mailto:jvpessoa2015@gmail.com">jvpessoa2015@gmail.com</a>
-                <a href="https://www.linkedin.com/in/jo%C3%A3o-victor-pessoa-de-lima-dos-anjos-4998a3276/" target="_blank">LinkedIn</a>
-                <a href="https://github.com/joaovictor912" target="_blank">GitHub</a>
-            </div>
-        </div>
-    </footer>
-
-<div class="modal" id="modal-projeto-1">
-    <div class="modal-content">
-        <button class="close-modal-btn">&times;</button>
-        <img src="images/app.png" alt="Imagem do Projeto Corretor de Provas" class="modal-img">
-        <h2>Projeto 1: Corretor de Provas</h2>
-        <p>Uma aplicação móvel multiplataforma, desenvolvida em Flutter, que automatiza a correção de provas de múltipla escolha. Utilizando a câmera do dispositivo, o sistema aplica técnicas de visão computacional + inteligência artificial com um backend em Python para analisar as folhas de resposta, comparar com um gabarito mestre e fornecer o resultado em um curto espaço de tempo. O projeto inclui gestão de turmas e provas, armazenamento persistente de dados e a capacidade de exportar relatórios detalhados para ficheiros Excel (.xlsx). A arquitetura cliente-servidor garante que o processamento pesado seja feito na nuvem, mantendo o aplicativo leve e rápido.</p>
-        </div>
-</div>
-
-<div class="modal" id="modal-projeto-2">
-    <div class="modal-content">
-        <button class="close-modal-btn">&times;</button>
-        <img src="images/ferraro.png" alt="Imagem do Projeto Previsão Fórmula 1" class="modal-img">
-        <h2>Projeto 2: Previsão Fórmula 1</h2>
-        <p>Este projeto de ciência de dados desenvolve e avalia modelos de machine learning para simular o grid de largada de futuras corridas de Fórmula 1. O sistema utiliza dados históricos oficiais para treinar modelos preditivos e aplica fatores de desempenho calculados para refinar os resultados, gerando uma classificação simulada que leva em conta a performance histórica de equipes e pilotos. O projeto compara a performance de um modelo de base (Regressão Linear) com um modelo mais avançado (Random Forest) e implementa uma lógica híbrida para tratar pilotos novatos, utilizando dados de suas temporadas de estreia para criar fatores de desempenho relevantes.</p>
-        <a href="https://github.com/joaovictor912/Previs-o-F1" target="_blank" class="modal-link">Ver no GitHub &rarr;</a>
-    </div>
-</div>
-
-<div class="modal" id="modal-projeto-3">
-    <div class="modal-content">
-        <button class="close-modal-btn">&times;</button>
-        <img src="images/o-que-e-um-museu-triscele-museologia.jpg" alt="Imagem do Projeto Art Seeker" class="modal-img">
-        <h2>Projeto 3: Art Seeker</h2>
-        <p>O Art Seeker é uma aplicação de Inteligência Artificial voltada para a busca interativa em grandes acervos de obras de arte. A solução utiliza modelos de NLP (Processamento de Linguagem Natural) para compreender consultas em linguagem natural, como “pinturas renascentistas com anjos e temas religiosos”.O sistema transforma essas consultas em vetores semânticos (embeddings) e realiza a comparação com descrições das obras no acervo.Além disso, um CrossEncoder baseado em redes neurais reavalia os pares [consulta, obra], garantindo maior precisão na ordenação dos resultados.</p>
-        <a href="https://github.com/joaovictor912/ArtSeeker" target="_blank" class="modal-link">Ver no GitHub &rarr;</a>
-    </div>
-</div>
-
-<div class="modal" id="modal-projeto-4">
-    <div class="modal-content">
-        <button class="close-modal-btn">&times;</button>
-        <img src="images/portifolio-interativo.png" alt="Imagem do Projeto Portfólio Interativo - Desktop OS" class="modal-img">
-        <h2>Projeto 4: Portfólio Interativo - Desktop OS</h2>
-        <p>Um portfólio web criativo que simula a experiência de um sistema operacional de desktop retrô. O projeto foi construído para ser uma demonstração prática de habilidades de front-end, utilizando apenas HTML, CSS e JavaScript puro para criar uma interface complexa e totalmente interativa.</p>
-        <a href="https://joaovictor912.github.io/portif-lio-interativo/" target="_blank" class="modal-link">Ver site &rarr;</a>
-    </div>
-</div>
-
-<div class="modal" id="modal-projeto-5">
-    <div class="modal-content">
-        <button class="close-modal-btn">&times;</button>
-        <img src="images/mundial.png" alt="Imagem do Projeto Previsão Mundial RF" class="modal-img">
-        <h2>Projeto 5: Previsão Mundial RF</h2>
-        <p>Este projeto é um simulador que utiliza a Simulação de Monte Carlo para estimar a probabilidade de cada time vencer o Mundial de Clubes 2025, executando o torneio 1000 vezes. A previsão de cada partida individual é realizada por um algoritmo de Machine Learning, o Random Forest, que calcula as chances de vitória, empate ou derrota com base em estatísticas detalhadas. O resultado final consolida essas milhares de simulações para determinar os favoritos mais prováveis.</p>
-        <a href="https://github.com/joaovictor912/MundialPrevis-oRF" target="_blank" class="modal-link">Ver no GitHub &rarr;</a>
-    </div>
-</div>
-    
     <script src="script.js"></script>
 </body>
 </html>
